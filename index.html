@@ -97,22 +97,93 @@
 </main>
 
 <script>
-  var CITATIONS = [
-    { t: "Notre cœur est sans repos tant qu’il ne repose pas en toi.", a: "Saint Augustin", s: "Les Confessions" },
+ var CITATIONS = [
     { t: "N’ayez pas peur !", a: "Saint Jean-Paul II", s: "Homélie d’inauguration, 22 octobre 1978" },
     { t: "Tout le malheur des hommes vient d’une seule chose, qui est de ne savoir pas demeurer en repos dans une chambre.", a: "Blaise Pascal", s: "Pensées" },
     { t: "Je veux passer mon ciel à faire du bien sur la terre.", a: "Sainte Thérèse de Lisieux", s: "Propos rapportés" },
     { t: "Ce que nous faisons n’est qu’une goutte d’eau dans la mer, mais la mer serait moindre s’il lui manquait cette goutte.", a: "Mère Teresa", s: "" },
-    { t: "Là où est ton trésor, là aussi sera ton cœur.", a: "Évangile selon saint Matthieu", s: "Mt 6, 21" },
-    { t: "Mettez à profit le temps présent.", a: "Lettre de saint Paul aux Éphésiens", s: "Ep 5, 16" },
-    { t: "Le temps est supérieur à l’espace.", a: "Pape François", s: "Evangelii gaudium, n° 222" },
+    { t: "Tirez profit du temps présent.", a: "Lettre de saint Paul aux Éphésiens", s: "Ep 5, 16" },
     { t: "La liberté ne consiste pas à faire ce que l’on veut, mais à avoir le droit de faire ce que l’on doit.", a: "Saint Jean-Paul II", s: "Homélie de Baltimore, 1995" },
     { t: "Tous naissent comme des originaux, mais beaucoup meurent comme des photocopies.", a: "Attribué à saint Carlo Acutis", s: "" },
-    { t: "Veillez et priez, afin de ne pas entrer en tentation.", a: "Évangile selon saint Matthieu", s: "Mt 26, 41" },
-    { t: "Ne vous mettez pas en souci du lendemain : demain aura soin de lui-même.", a: "Évangile selon saint Matthieu", s: "Mt 6, 34" },
-    { t: "Tout ce que nous avons à décider, c’est ce que nous ferons du temps qui nous est imparti.", a: "Gandalf", s: "J. R. R. Tolkien, La Communauté de l’Anneau" }
-  ];
+    { t: "Veillez et priez, pour ne pas entrer en tentation.", a: "Évangile selon saint Matthieu", s: "Mt 26, 41" },
+    { t: "Ne vous faites donc pas de souci pour demain : demain aura souci de lui-même.", a: "Évangile selon saint Matthieu", s: "Mt 6, 34" },
+    { t: "Tout ce que nous avons à décider, c’est ce que nous ferons du temps qui nous est imparti.", a: "Gandalf", s: "J. R. R. Tolkien, La Communauté de l’Anneau" },
+    { t: "Il faut tout faire par amour, rien par force.", a: "Saint François de Sales", s: "Attribué" },
+    { t: "Pour éclairer, la chandelle doit se consumer.", a: "Attribué à saint Charles Borromée", s: "" },
+    { t: "Ne prenez pas pour modèle le monde présent, mais transformez-vous en renouvelant votre façon de penser.", a: "Saint Paul", s: "Lettre aux Romains, Rm 12, 2" },
+    { t: "Je peux tout en celui qui me donne la force.", a: "Saint Paul", s: "Lettre aux Philippiens, Ph 4, 13" },
+    { t: "Lorsque je suis faible, c’est alors que je suis fort.", a: "Saint Paul", s: "Deuxième lettre aux Corinthiens, 2 Co 12, 10" },
+    { t: "La mesure d’aimer Dieu, c’est de l’aimer sans mesure.", a: "Saint Bernard de Clairvaux", s: "De l’amour de Dieu" },
+    { t: "Dieu premier servi.", a: "Sainte Jeanne d’Arc", s: "Parole rapportée lors de son procès" },
+    { t: "À la sueur de ton visage, tu mangeras ton pain.", a: "Livre de la Genèse", s: "Gn 3, 19" },
+    { t: "Tout ce que ta main trouve à faire, fais-le avec ta force.", a: "Livre de Qohéleth", s: "Qo 9, 10" },
+    { t: "Tout ce que vous faites, faites-le de bon cœur, comme pour le Seigneur et non pour des hommes.", a: "Saint Paul", s: "Lettre aux Colossiens, Col 3, 23", p: 3 },
+    { t: "Si quelqu’un ne veut pas travailler, qu’il ne mange pas non plus.", a: "Saint Paul", s: "Deuxième lettre aux Thessaloniciens, 2 Th 3, 10" },
+    { t: "Le travail est pour l’homme, et non l’homme pour le travail.", a: "Saint Jean-Paul II", s: "Laborem exercens, n° 6" },
+    { t: "Sanctifier le travail, se sanctifier dans le travail, sanctifier les autres par le travail.", a: "Saint Josémaria Escrivá", s: "" },
+    { t: "Nous ne pouvons pas faire de grandes choses, seulement de petites choses avec un grand amour.", a: "Mère Teresa", s: "" },
+    { t: "Agis comme si tout dépendait de toi, en sachant que tout dépend de Dieu.", a: "Attribué à saint Ignace de Loyola", s: "" },
+    { t: "À l’exercice habituel de ta profession, ajoute un motif surnaturel et tu auras sanctifié le travail.", a: "Saint Josémaria Escrivá", s: "Chemin, n° 359" },
+    { t: "Faites tout par amour. Ainsi il n’y a pas de petites choses : tout est grand.", a: "Saint Josémaria Escrivá", s: "Chemin, n° 813" },
+    { t: "Je m’engage toujours, en toutes choses, à connaître le plus clairement possible la volonté de Dieu et à la respecter, et cela de la manière la plus parfaite.", a: "Bienheureux Charles d’Autriche", s: "Sa devise" },
+    { t: "La devise de notre monde contemporain, c’est “omnia illico” (tout, tout de suite).", a: "Gustave Thibon", s: "Attribué" },
+    { t: "Il y a un moment pour tout, et un temps pour chaque chose sous le ciel.", a: "Livre de Qohéleth", s: "Qo 3, 1" },
+    { t: "Apprends-nous la vraie mesure de nos jours : que nos cœurs pénètrent la sagesse.", a: "Psaume 89 (90)", s: "Ps 89, 12" },
+    { t: "Au soir de cette vie, on t’examinera sur l’amour.", a: "Saint Jean de la Croix", s: "Avis et maximes" },
+    { t: "Va vers la fourmi, paresseux ! Regarde-la marcher et deviens sage.", a: "Livre des Proverbes", s: "Pr 6, 6" },
+    { t: "Jusqu’à quand resteras-tu couché, paresseux ? Quand te lèveras-tu de ton sommeil ?", a: "Livre des Proverbes", s: "Pr 6, 9" },
+    { t: "Recommande au Seigneur tes œuvres, et tes projets réussiront.", a: "Livre des Proverbes", s: "Pr 16, 3" },
+    { t: "Fie-toi au Seigneur de tout ton cœur, ne t’appuie pas sur ton intelligence.", a: "Livre des Proverbes", s: "Pr 3, 5" },
+    { t: "Venez à moi, vous tous qui peinez sous le poids du fardeau, et moi, je vous donnerai le repos.", a: "Évangile selon saint Matthieu", s: "Mt 11, 28" },
+    { t: "Ne soyez inquiets de rien.", a: "Saint Paul", s: "Lettre aux Philippiens, Ph 4, 6" },
+    { t: "Déchargez-vous sur lui de tous vos soucis, car il prend soin de vous.", a: "Première lettre de saint Pierre", s: "1 P 5, 7" },
+    { t: "Que rien ne te trouble, que rien ne t’effraie : tout passe, Dieu ne change pas.", a: "Sainte Thérèse d’Avila", s: "Poème “Nada te turbe”" },
+    { t: "Tout ira bien, et tout ira bien, et toutes sortes de choses iront bien.", a: "Julienne de Norwich", s: "Révélations de l’amour divin" },
+    { t: "Mon Père, je m’abandonne à toi, fais de moi ce qu’il te plaira.", a: "Saint Charles de Foucauld", s: "Prière d’abandon" },
+    { t: "Je ne demande pas à voir l’horizon lointain : un seul pas me suffit.", a: "Saint John Henry Newman", s: "Poème “Lead, Kindly Light”", p: 5 },
+    { t: "Prie, espère et ne t’inquiète pas.", a: "Attribué à saint Padre Pio", s: "" },
+    { t: "La lampe du corps, c’est l’œil. Si ton regard est sain, ton corps tout entier sera lumineux.", a: "Évangile selon saint Matthieu", s: "Mt 6, 22" },
+    { t: "Marthe, Marthe, tu te donnes du souci et tu t’agites pour bien des choses. Pourtant, une seule chose est nécessaire.", a: "Évangile selon saint Luc", s: "Lc 10, 41-42" },
+    { t: "L’attention est la forme la plus rare et la plus pure de la générosité.", a: "Simone Weil", s: "Lettre à Joë Bousquet, 1942" },
+    { t: "Sept fois le juste tombe, et il se relève.", a: "Livre des Proverbes", s: "Pr 24, 16" , p: 3},
+    { t: "J’ai mené jusqu’au bout le bon combat, j’ai achevé ma course, j’ai gardé la foi.", a: "Saint Paul", s: "Deuxième lettre à Timothée, 2 Tm 4, 7" },
+    { t: "Ne nous lassons pas de faire le bien ; car, le moment venu, nous moissonnerons si nous ne nous relâchons pas.", a: "Saint Paul", s: "Lettre aux Galates, Ga 6, 9" },
+    { t: "Sois fort et courageux ! Ne crains pas, car le Seigneur ton Dieu est avec toi.", a: "Livre de Josué", s: "Jos 1, 9" },
+    { t: "Le divertissement nous amuse et nous fait arriver insensiblement à la mort.", a: "Blaise Pascal", s: "Pensées" },
+    { t: "Soyez toujours dans la joie du Seigneur ; je le redis : soyez dans la joie.", a: "Saint Paul", s: "Lettre aux Philippiens, Ph 4, 4" },
+    { t: "Il n’y a qu’une tristesse, c’est de n’être pas des saints.", a: "Léon Bloy", s: "La Femme pauvre" },
+    { t: "Vous ne savez rien du lendemain ! Votre vie, qu’est-ce donc ? Une vapeur qui paraît un instant, puis disparaît.", a: "Lettre de saint Jacques", s: "Jc 4, 14" },
+    { t: "Insensé, cette nuit même, on va te redemander ta vie.", a: "Évangile selon saint Luc", s: "Lc 12, 20" , p: 5},
+    { t: "Le matin, pense que tu n’arriveras pas au soir ; et le soir, n’ose pas te promettre le matin.", a: "L’Imitation de Jésus-Christ", s: "Livre I, chapitre 23" },
+    { t: "N’aimons pas en paroles ni par de beaux discours, mais par des actes et en vérité.", a: "Première lettre de saint Jean", s: "1 Jn 3, 18" },
+    { t: "Chaque fois que vous l’avez fait à l’un de ces petits, c’est à moi que vous l’avez fait.", a: "Évangile selon saint Matthieu", s: "Mt 25, 40" },
+    { t: "Soyez sobres, soyez vigilants.", a: "Première lettre de saint Pierre", s: "1 P 5, 8", p: 3 },
+    { t: "La sobriété, vécue avec liberté et de manière consciente, est libératrice.", a: "Pape François", s: "Laudato si’, n° 223", p: 2 },
+    { t: "Il retranchera quelque chose de son manger, de son boire, de son sommeil, de ses bavardages et de ses plaisanteries, et il attendra la sainte Pâque avec la joie du désir spirituel.", a: "Saint Benoît", s: "Règle, chapitre 49" },  
+    { t: "Avant tout, quand tu commences quelque bonne œuvre, demande à Dieu par une prière très instante de la mener lui-même à son achèvement.", a: "Saint Benoît", s: "Règle, Prologue" },
+    { t: "Levons-nous donc enfin, puisque l’Écriture nous y invite : “Il est déjà l’heure de nous éveiller du sommeil.” Ouvrons les yeux à la lumière qui vient de Dieu, et tendons l’oreille à ce que la voix du Seigneur nous crie chaque jour.", a: "Saint Benoît", s: "Règle, Prologue" },
+    { t: "Ne rien préférer à l’amour du Christ. Avoir chaque jour devant les yeux la mort qui menace. Veiller à toute heure sur les actes de sa vie. Et ne jamais désespérer de la miséricorde de Dieu.", a: "Saint Benoît", s: "Règle, chapitre 4, les instruments des bonnes œuvres" },
+    { t: "Le premier degré de l’humilité est l’obéissance sans délai. Elle est le propre de ceux qui ne préfèrent rien au Christ.", a: "Saint Benoît", s: "Règle, chapitre 5" },
+    { t: "L’oisiveté est l’ennemie de l’âme. C’est pourquoi les frères doivent consacrer certaines heures au travail manuel, et d’autres à la lecture des choses divines.", a: "Saint Benoît", s: "Règle, chapitre 48" },
+    { t: "Afin qu’en toutes choses Dieu soit glorifié.", a: "Saint Benoît", s: "Règle, chapitre 57" },
+    { t: "Très bien, serviteur bon et fidèle ! Tu as été fidèle pour peu de choses, je t’en confierai beaucoup ; entre dans la joie de ton seigneur.", a: "Évangile selon saint Matthieu", s: "Mt 25, 21" },
+    { t: "Celui qui est digne de confiance dans la moindre chose est digne de confiance aussi dans une grande.", a: "Évangile selon saint Luc", s: "Lc 16, 10" },
+    { t: "C’est pour que nous soyons libres que le Christ nous a libérés. Alors tenez bon, ne vous mettez pas de nouveau sous le joug de l’esclavage.", a: "Saint Paul", s: "Lettre aux Galates, Ga 5, 1", p: 5 },
+    { t: "Tout est permis pour moi, mais tout n’est pas bon ; tout est permis pour moi, mais je ne me laisserai pas asservir par quoi que ce soit.", a: "Saint Paul", s: "Première lettre aux Corinthiens, 1 Co 6, 12" },
+    { t: "Si le Fils vous rend libres, réellement vous serez libres.", a: "Évangile selon saint Jean", s: "Jn 8, 36" , p: 3},
+    { t: "Sois fidèle jusqu’à la mort, et je te donnerai la couronne de la vie.", a: "Livre de l’Apocalypse", s: "Ap 2, 10" },
+    { t: "Ce qu’on demande à des intendants, c’est que chacun soit trouvé fidèle.", a: "Saint Paul", s: "Première lettre aux Corinthiens, 1 Co 4, 2" , p: 3},
+    { t: "L’homme fidèle sera comblé de bénédictions.", a: "Livre des Proverbes", s: "Pr 28, 20" },
+    { t: "Dieu ne m’a pas appelée à réussir, mais à être fidèle.", a: "Attribué à Mère Teresa", s: "" , p: 3},
+    { t: "Frères, vous avez été appelés à la liberté ; mais que cette liberté ne soit pas un prétexte pour votre égoïsme ; au contraire, mettez-vous, par amour, au service les uns des autres.", a: "Saint Paul", s: "Lettre aux Galates, Ga 5, 13" },
+    { t: "Chacun est esclave de ce qui l’a dominé.", a: "Deuxième lettre de saint Pierre", s: "2 P 2, 19", p: 3},
+ ];
 
+var POOL = [];
+  CITATIONS.forEach(function (c, i) {
+    var poids = c.p || 1;
+    for (var k = 0; k < poids; k++) POOL.push(i);
+  });
   var elCitation = document.getElementById("citation");
   var elAuteur = document.getElementById("auteur");
   var bouton = document.getElementById("autre");
@@ -120,7 +191,7 @@
 
   function afficher(premiere) {
     var i;
-    do { i = Math.floor(Math.random() * CITATIONS.length); } while (i === dernier && CITATIONS.length > 1);
+    do { i = POOL[Math.floor(Math.random() * POOL.length)]; } while (i === dernier && CITATIONS.length > 1);
     dernier = i;
     var c = CITATIONS[i];
 
